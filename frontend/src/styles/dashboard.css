@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    font-family: "Segoe UI", sans-serif;
+}
+
+.dashboard-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.glass-card {
+    background: rgba(255, 113, 217, 0.24);
+    border-radius: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 30px;
+    padding-bottom: 80px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.55);
+    color: #000000;
+    max-width: 500px;
+    width: 100%;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.glass-card h2 {
+    margin-bottom: 25px;
+    font-size: 40px;
+    font-weight: 600;
+    color: #d6336c;
+    text-align: center;
+}
+
+.info-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    padding: 8px 12px;
+    background: rgba(44, 1, 41, 0.63);
+    border-radius: 8px;
+}
+
+.info-item strong {
+    color: #cd86cb;
+    font-size: larger;
+}
+
+.info-item span {
+    color: #f9916e;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.button-group button {
+    padding: 10px 20px;
+    background-color: #d6336c;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-group button:hover {
+    background-color: #bf2b5c;
+}

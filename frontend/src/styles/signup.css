@@ -1,0 +1,112 @@
+/* Signup.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background: url("E:\WomanTravel\CSE470-Samiha\frontend\public\pinkplane.jpeg") no-repeat  center/cover;
+  align-items: center;
+}
+.form-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.form-title img.logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.form-title h2 {
+  font-size: 48px;
+  color: #d6336c;
+  margin: 0;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+
+form {
+  background: rgba(219, 97, 211, 0.326); /* Opaque glass effect */
+  box-shadow: 0 8px 32px 0 rgba(0, 1, 15, 0.57);
+  backdrop-filter: blur(10px); /* Glass effect */
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 350px;
+  color: #fff;
+}
+
+form h2 {
+  text-align: center;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 12px 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: rgba(2, 2, 2, 0.169);
+  color: #000000;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+input::placeholder {
+  color: #000000;
+}
+
+input:focus {
+  outline: none;
+  background-color: rgba(254, 169, 237, 0.35);
+}
+
+button {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #d400b1;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: #fc76e6;
+  transform: scale(1.05);
+  color: #4e4e4e;
+}
+
+p {
+  text-align: center;
+  font-size: 14px;
+  color: #2d2d2d;
+}
+
+a {
+  color: #3e8a93;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #355aff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  font-weight: bold;
+}
