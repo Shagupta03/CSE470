@@ -1,26 +1,117 @@
+/* Full page background */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+}
+
+.login-page {
+    min-height: 100vh;
+    width: 100vw;
+    background: url('/pinkplane.jpeg') no-repeat center center fixed;
+    background-size: cover;          /* ensures full coverage */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Login form box */
 .login-form {
-  width: 300px;
-  margin: auto;
-  padding: 20px;
-  border-radius: 10px;
+    width: 450px;                         /* slightly bigger form */
+    padding: 30px 25px;                    /* more padding */
+    border-radius: 12px;
+    background: rgba(108, 161, 218, 0.25);  /* bluish transparent */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(6px);            /* subtle glass effect */
 }
-.login-form input,
+
+/* Inputs styling */
+.login-form input {
+    display: block;
+    width: 80%;                 /* smaller than form */
+    margin: 12px auto;          /* centers horizontally */
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    font-size: 1rem;
+    color: #000;                /* text color */
+    background: #ffffff;        /* full white background */
+}
+
+/* Placeholder text color */
+.login-form input::placeholder {
+    color: #999;
+    opacity: 1;
+}
+
+/* Button styling */
 .login-form button {
-  display: block;
-  width: 100%;
-  margin-bottom: 10px;
-  padding: 8px;
+    display: block;
+    width: 85%;                 /* smaller than form */
+    margin: 12px auto;          /* centers horizontally */
+    padding: 12px;              /* slightly bigger for better click area */
+    border: none;
+    border-radius: 8px;         /* match register button */
+    background: #d400b1;        /* pinkish button */
+    color: white;               /* text color */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease, color 0.3s ease;
 }
+
+.login-form button:hover {
+    background: #fc76e6;        /* lighter pink on hover */
+    transform: scale(1.05);     /* slight zoom effect */
+    color: #4e4e4e;             /* text color changes on hover */
+}
+
+
+/* Title + Logo */
+.login-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 .login-title h2 {
-  font-size: 48px;
-  color: #d6336c;
-  margin: 0;
-  font-family: 'Times New Roman', Times, serif;
+    font-size: 48px;
+    color: #d6336c;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
 }
+
 .login-title img.logo {
-  display: flex;
-  width: 80px;
-  height: 80px;
-  object-fit: contain;
-  margin: 0 auto 5px; /* center horizontally + space below */
+    display: block;
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    margin: 0 auto 10px;
+}
+
+/* Signup link */
+.login-form p {
+    font-size: 0.95rem;
+    color: #0c0404;
+    text-align: center;
+}
+
+.login-form p a {
+    color: #3d0312;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-form p a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .login-form {
+        width: 90%;
+        padding: 20px;
+    }
+    .login-title h2 {
+        font-size: 36px;
+    }
 }

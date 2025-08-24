@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../styles/TripDetails.css";
+import "../styles/tripDetails.css";
 
 function TripDetails() {
   const [trips, setTrips] = useState([]);
@@ -12,7 +12,9 @@ function TripDetails() {
 
       if (userEmail) {
         try {
-          const response = await fetch(`http://localhost:5000/api/tripDetails/user/${userEmail}`);
+          const response = await fetch(
+            `http://localhost:5000/api/tripDetails/user/${userEmail}`
+          );
           const data = await response.json();
           console.log("📦 Trips fetched:", data);
           setTrips(data);
@@ -31,7 +33,8 @@ function TripDetails() {
 
   return (
     <div className="trip-details-container">
-      <h2>Your <img src="/logo.png" alt="Logo" className="logo" /> Trip Details</h2>
+      <h2>Your Trip Details</h2>
+
       {trips.length === 0 ? (
         <p>No trips found.</p>
       ) : (
@@ -39,24 +42,28 @@ function TripDetails() {
           {trips.map((trip) => (
             <li key={trip._id} className="trip-card">
               <div className="trip-section">
-                <strong>Destination:</strong>
+                <strong>Destination</strong>
                 <span>{trip.destination}</span>
               </div>
+
               <div className="trip-section">
-                <strong>Budget:</strong>
-                <span className="taka">${trip.budget}</span>
-              </div>
-              <div className="trip-section">
-                <strong>Description:</strong>
-                <span>{trip.description}</span>
-              </div>
-              <div className="trip-section">
-                <strong>Start:</strong>
+                <strong>Start Date</strong>
                 <span>{trip.startDate?.slice(0, 10)}</span>
               </div>
+
               <div className="trip-section">
-                <strong>End:</strong>
+                <strong>End Date</strong>
                 <span>{trip.endDate?.slice(0, 10)}</span>
+              </div>
+
+              <div className="trip-section">
+                <strong>Budget</strong>
+                <span className="taka">${trip.budget}</span>
+              </div>
+
+              <div className="trip-section">
+                <strong>Description</strong>
+                <span>{trip.description}</span>
               </div>
             </li>
           ))}

@@ -7,7 +7,8 @@ body {
   height: 100vh;
   display: flex;
   justify-content: center;
-  background: url("E:\WomanTravel\CSE470-Samiha\frontend\public\pinkplane.jpeg") no-repeat  center/cover;
+  background: url('/pinkplane.jpeg') no-repeat center center fixed;
+
   align-items: center;
 }
 .form-title {

@@ -1,13 +1,13 @@
 .trip-details-container {
     min-height: 100vh;
-    padding: 40px 20px;
-    background: url('/background.jpg') no-repeat center center fixed;
+    padding: 80px 20px 40px 20px; /* extra top padding so h2 is always visible */
+    background: url('/pinkplane.jpg') no-repeat center center fixed;
     background-size: cover;
     font-family: "Segoe UI", sans-serif;
     color: #fff;
     text-align: center;
+    overflow-y: auto; /* allow scrolling if content is large */
 }
-
 .trip-details-container h2 {
     font-size: 52px;
     font-family: 'Times New Roman', Times, serif;
@@ -29,7 +29,8 @@
     background: rgba(255, 255, 255, 0.1);
     border-radius: 16px;
     width: 600px;
-    height: 550px;
+    /* remove fixed height */
+    min-height: 250px; /* optional for consistent card size */
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
